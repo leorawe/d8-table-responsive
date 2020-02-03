@@ -1,0 +1,5 @@
+name: Demo theme
+description: A custom theme to show Responsive Table.
+type: theme
+base theme: stable
+core: 8.x

@@ -1,0 +1,96 @@
+.my-table-bordered {
+  @apply my-border;
+  @apply my-border-black;
+  @apply my-border-solid;
+}
+
+.my-table {
+   table {
+
+      max-width: 100%;
+      empty-cells: show;
+      @apply my-w-full;
+      @apply my-border-collapse;
+      @apply my-p-000;
+      @apply my-border-0;
+
+   }
+  .my-table-bordered>tbody>tr>th,
+  .my-table-bordered>tbody>tr>td,
+  .my-table-bordered>thead>tr>th,
+  .table>caption+thead>tr:first-child>th
+  {
+    min-width: 125px;
+    @apply my-border;
+    @apply my-border-solid;
+    @apply my-border-black;
+    @apply my-pt-050;
+    @apply my-pb-050;
+    @apply my-pr-085;
+    @apply my-pl-085;
+  }
+
+  .table>caption+thead>tr:first-child>th,
+  .table>thead:first-child>tr:first-child>th   {
+    @apply my-border-t;
+    @apply my-border-solid;
+    @apply my-border-black;
+  }
+}
+
+
+
+@media screen and (max-width: $breakpoint-tablet) {
+  .my-table-responsive {
+    @apply my-border-0;
+    @apply my-w-full;
+  }
+    table {
+      @apply my-border-0;
+      @apply my-mb-200;
+    }
+
+    table thead {
+      clip: rect(0 0 0 0);
+      height: 1px;
+      margin: -1px;
+      width: 1px;
+      @apply my-overflow-hidden;
+      @apply my-absolute;
+      @apply my-border-0;
+      @apply my-p-000;
+    }
+
+    table tr {
+      @apply my-block;
+      @apply my-mb-200;
+      @apply my-border-r;
+      @apply my-border-l;
+      @apply my-border-t;
+      @apply my-border-b-2;
+      @apply my-border-solid;
+      @apply my-border-black;
+    }
+
+    table.my-table-bordered>tbody>tr>td,
+    .my-table-responsive>.my-table-bordered>tbody>tr:last-child>td {
+      @apply my-text-right;
+      @apply my-block;
+      @apply my-border-0;
+      @apply my-border-b;
+      @apply my-border-solid;
+      @apply my-border-black;
+
+    }
+
+    table td::before {
+      content: attr(data-title);
+      @apply my-float-left;
+      @apply my-font-bold;
+    }
+    .my-table .my-table-bordered>tbody>tr>td {
+      @apply my-border-r-0;
+      @apply my-border-t-0;
+      @apply my-border-l-0;
+    }
+}
